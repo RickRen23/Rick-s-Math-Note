@@ -1,0 +1,73 @@
+@use "./variables.scss" as *;
+
+// Math formula formatting
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+  margin: 0.8rem 0;
+}
+
+.katex {
+  font-size: 1.08em;
+}
+
+// Math-specific Callout styles
+.callout {
+  &[data-callout="theorem"],
+  &[data-callout="定理"] {
+    --color: #7c4dff;
+    --border: #7c4dff44;
+    --bg: #7c4dff10;
+  }
+
+  &[data-callout="lemma"],
+  &[data-callout="引理"] {
+    --color: #3f51b5;
+    --border: #3f51b544;
+    --bg: #3f51b510;
+  }
+
+  &[data-callout="definition"],
+  &[data-callout="定义"] {
+    --color: #00897b;
+    --border: #00897b44;
+    --bg: #00897b10;
+  }
+
+  &[data-callout="proof"],
+  &[data-callout="证明"] {
+    --color: #546e7a;
+    --border: #546e7a44;
+    --bg: #546e7a0a;
+
+    .callout-content::after {
+      content: "■";
+      float: right;
+      color: var(--color);
+      margin-top: 0.2rem;
+      font-size: 1.1em;
+    }
+  }
+
+  &[data-callout="corollary"],
+  &[data-callout="推论"] {
+    --color: #5c6bc0;
+    --border: #5c6bc044;
+    --bg: #5c6bc010;
+  }
+
+  &[data-callout="proposition"],
+  &[data-callout="命题"] {
+    --color: #ab47bc;
+    --border: #ab47bc44;
+    --bg: #ab47bc10;
+  }
+
+  &[data-callout="remark"],
+  &[data-callout="注记"] {
+    --color: #78909c;
+    --border: #78909c44;
+    --bg: #78909c10;
+  }
+}
