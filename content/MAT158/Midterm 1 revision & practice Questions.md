@@ -7,7 +7,7 @@ tags:
   - uniform-continuity
 ---
 
-# Real Analysis Problem Set (Limits and Uniform Continuity)
+# Mathematical Analysis Problem Set (Limits and Uniform Continuity)
 
 ## Problem 1 
 
